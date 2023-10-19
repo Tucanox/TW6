@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GET DEMO</title>
+    <title>POST DEMO</title>
 </head>
 <body>
 <form method="post" action="esercizio05_b.html">
@@ -14,7 +14,7 @@
 </form>
 <script>
     const params = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop),
+        post: (searchParams, prop) => searchParams.post(prop),
     });
     // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
     let login = params.login; // "some_value"
